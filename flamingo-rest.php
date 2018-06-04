@@ -84,13 +84,7 @@ function brag_rest_get_flamingo( $object, $field_name, $request ) {
  * @return bool|int
  */
 function brag_rest_update_flamingo( $value, $object, $field_name ) {
-	//    $message = "Callback response received:  \n\n" . 
-	//    print_r($_REQUEST, true) . "\n\n Value" 
-	//    .print_r($value, true) . "\n\n Object" 
-	//    . print_r($object, true) . "\n\n Field Name" 
-	//    . print_r($field_name, true);
-	// wp_mail('email@email.com', 'Subject', $message);
-
+    
 	foreach ($value as $field => $data) {
 		update_post_meta( $object->ID, $field, $data  );
 	}
